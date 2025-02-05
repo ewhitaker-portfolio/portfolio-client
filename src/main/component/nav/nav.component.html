@@ -1,0 +1,16 @@
+<nav class="nav-component">
+    <div class="nav-container">
+        <ul class="nav-list">
+            @for (item of items; track item.label) {
+            <li class="nav-list-item">
+                <a class="nav-list-item-anchor">
+                    <svg class="nav-list-item-graphic" [attr.width]="item.width" [attr.height]="item.height">
+                        <path [attr.d]="item.path"></path>
+                    </svg>
+                    <span class="nav-list-item-label">{{ item.label }}</span>
+                </a>
+            </li>
+            }
+        </ul>
+    </div>
+</nav>
