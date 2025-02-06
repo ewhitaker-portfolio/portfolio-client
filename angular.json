@@ -9,6 +9,9 @@
                 "@schematics/angular:component": {
                     "path": "src/main"
                 }
+                "@schematics/angular:service": {
+                    "path": "src/main"
+                }
             },
             "root": "",
             "sourceRoot": "src",

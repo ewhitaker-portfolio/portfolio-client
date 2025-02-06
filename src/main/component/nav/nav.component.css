@@ -1,9 +1,11 @@
 .nav-component {
-    background-color: #0E0E10;
     height: 100vh;
     max-height: 100vh;
     padding-block: 1rem 2rem;
-    background-color: color-mix(in srgb, #0F0F11, 70%, transparent);
+    background-color: color-mix(in srgb, #0F0F11 70%, transparent);
+    backdrop-filter: blur(16px);
+    /* TODO: remove */
+    border-inline-end: 1px solid #232125;
     border-block-end: 1px solid #232125;
     position: relative;
     overflow: auto;
@@ -21,7 +23,6 @@
     padding: 0;
     text-decoration: none;
     font-size: .875rem;
-    line-height: 1.4rem;
     font-weight: 400;
     letter-spacing: -.01rem;
 }
@@ -34,9 +35,29 @@
     color: #A39FA9;
 }
 
+.nav-list-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    bottom: 0;
+    width: 2px;
+    height: 60%;
+    transform-origin: center;
+    background-color: #FBFBFB;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.9);
+    transition: all .3s ease;
+}
+
 .nav-list-item:hover {
     color: #FBFBFB;
     fill: #FBFBFB;
+}
+
+.nav-list-item-active::before {
+    opacity: 1;
+    transform: translateY(-50%) scaleY(1);
 }
 
 .nav-list-item-anchor {
