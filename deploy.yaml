@@ -1,0 +1,3 @@
+# [START gae_deploy_yaml]
+runtime: nodejs22
+# [END gae_deploy_yaml]
