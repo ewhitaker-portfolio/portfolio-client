@@ -73,13 +73,12 @@
 }
 
 .nav-component {
-    height: 100vh;
-    max-height: 100vh;
+    height: calc(100vh - 3rem);
+    max-height: calc(100vh - 3rem);
     padding-block: 1rem 2rem;
     background-color: color-mix(in srgb, #0F0F11 70%, transparent);
     backdrop-filter: blur(16px);
     border-inline-end: 1px solid #232125;
-    border-block-end: 1px solid #232125;
     position: relative;
     overflow: auto;
 }

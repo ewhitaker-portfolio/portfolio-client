@@ -1,10 +1,9 @@
 .resume-component {
-    min-height: 100vh;
+    min-height: calc(100vh - 3rem);
     display: flex;
     justify-content: center;
     align-items: center;
     padding-block: 1rem 2rem;
-    border-block-end: 1px solid #232125;
 }
 
 h1 {

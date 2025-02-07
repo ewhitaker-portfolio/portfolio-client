@@ -1,14 +1,11 @@
 .project-component {
-    min-height: 100vh;
+    min-height: calc(100vh - 3rem);
     display: flex;
     justify-content: center;
     align-items: center;
     padding-block: 1rem 2rem;
-    border-block-end: 1px solid #232125;
 }
 
-h1 {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #A39FA9;
+.project-container {
+    width: 100%;
 }
