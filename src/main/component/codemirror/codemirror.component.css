@@ -1,0 +1,45 @@
+.codemirror-component {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: #FBFBFB;
+    transition: 0.3s ease;
+}
+
+.cm-gutters {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.cm-gutter {
+    background-color: transparent !important;
+    color: #FBFBFB !important;
+}
+
+.cm-line.cm-activeLine {
+    background-color: color-mix(in srgb, #FBFBFB 5%, transparent) !important;
+}
+
+.cm-activeLineGutter {
+    background-color: color-mix(in srgb, #FBFBFB 5%, transparent) !important;
+}
+
+.cm-focused .cm-selectionBackground {
+    background-color: color-mix(in srgb, #FBFBFB 5%, transparent) !important;
+}
+
+
+.cm-selectionBackground {
+    background-color: color-mix(in srgb, #FBFBFB 5%, transparent) !important;
+}
+
+
+.cm-cursor {
+    border-color: #FBFBFB !important;
+}
+
+.cm-panels {
+    background-color: color-mix(in srgb, #FBFBFB 5%, transparent) !important;
+    color: #FBFBFB !important;
+}

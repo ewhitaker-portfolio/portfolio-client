@@ -3,6 +3,29 @@
     background-color: #0F0F11;
 }
 
+.main-nav-container {
+    height: 100%;
+}
+
+.nav-component {
+    display: flex;
+    align-items: stretch;
+    height: calc(100vh - 3rem);
+    max-height: calc(100vh - 3rem);
+    padding-block: 1rem 2rem;
+    background-color: color-mix(in srgb, #0F0F11 70%, transparent);
+    backdrop-filter: blur(16px);
+    border-inline-end: 1px solid #232125;
+    position: relative;
+    overflow: auto;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .nav-header {
     display: flex;
     justify-content: center;
@@ -13,7 +36,7 @@
     width: 32px;
     height: 24px;
     position: relative;
-    margin: 50px auto;
+    margin: 0 auto;
     background: none;
     border: none;
     transform: rotate(0deg);
@@ -72,22 +95,6 @@
     left: 50%;
 }
 
-.nav-component {
-    height: calc(100vh - 3rem);
-    max-height: calc(100vh - 3rem);
-    padding-block: 1rem 2rem;
-    background-color: color-mix(in srgb, #0F0F11 70%, transparent);
-    backdrop-filter: blur(16px);
-    border-inline-end: 1px solid #232125;
-    position: relative;
-    overflow: auto;
-}
-
-.nav-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
 
 .nav-list {
     list-style: none;
@@ -129,6 +136,11 @@
 }
 
 .nav-list-item:hover {
+    color: #FBFBFB;
+    fill: #FBFBFB;
+}
+
+.nav-list-item.active {
     color: #FBFBFB;
     fill: #FBFBFB;
 }

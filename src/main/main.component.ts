@@ -51,5 +51,5 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     ]
 })
 export class MainComponent {
-    open = true;
+    open = false;
 }

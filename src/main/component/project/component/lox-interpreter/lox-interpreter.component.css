@@ -1,24 +1,105 @@
 .project-lox-component {
     display: flex;
     justify-content: stretch;
-    gap: 1rem;
     width: 100%;
+    height: 100%;
+    overflow: auto;
 }
 
-.project-lox-component div {
-    width: 50%;
+.lox-tutorial {
+    flex: 1;
+    color: #FBFBFB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-inline-end: 1px solid #413E46;
+    padding-inline: 4rem;
+    margin-inline-end: 1rem;
+    padding-block: 1rem 2rem;
+}
+
+.lox-interactive {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    margin-inline-end: 1rem;
+    top: 0;
+    position: sticky;
+}
+
+.lox-interactive-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-inline: 1px solid #413E46;
+    padding: 0.5rem;
+}
+
+.lox-interactive-container {
+    flex: 1;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1800px) {
+    .lox-interactive-container {
+        flex-direction: row;
+    }
+}
+
+.lox-interactive-container>div {
+    width: 100%;
+    height: 50%;
+    border: 1px solid #413E46;
+}
+
+@media (min-width: 1800px) {
+    .lox-interactive-container>div {
+        width: 50%;
+        height: 100%;
+    }
 }
 
 .lox-editor {
-    background-color: red;
-    border-radius: 12px;
-    margin-left: 1rem;
-    min-height: calc(100vh - 3rem);
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #232125;
 }
 
-.lox-terminal {
-    background-color: blue;
-    border-radius: 12px;
-    margin-right: 1rem;
-    min-height: calc(100vh - 3rem);
+.lox-editor-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #151417;
+    color: #FBFBFB;
+    border-block-end: 1px solid #413E46;
+}
+
+.lox-editor-container {
+    width: 100%;
+    height: 100%;
+}
+
+.lox-console {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #232125;
+}
+
+.lox-console-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #151417;
+    color: #FBFBFB;
+    border-block-end: 1px solid #413E46;
+}
+
+.lox-console-container {
+    width: 100%;
+    height: 100%;
 }

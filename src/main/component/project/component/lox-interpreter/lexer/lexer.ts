@@ -1,5 +1,4 @@
-import { Token } from "../token/token";
-import { TokenType } from "../token/token-type";
+import { Token, TokenType } from "../token/token";
 
 export class Lexer {
     static keywords = new Map<string, TokenType>();
