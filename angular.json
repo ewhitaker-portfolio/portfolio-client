@@ -8,7 +8,7 @@
             "schematics": {
                 "@schematics/angular:component": {
                     "path": "src/main"
-                }
+                },
                 "@schematics/angular:service": {
                     "path": "src/main"
                 }
@@ -34,7 +34,7 @@
                             }
                         ],
                         "styles": [
-                            "src/styles.css",
+                            "src/styles.css"
                         ],
                         "scripts": []
                     },
@@ -96,11 +96,23 @@
                         ],
                         "scripts": []
                     }
+                },
+                "lint": {
+                    "builder": "@angular-eslint/builder:lint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "src/**/*.ts",
+                            "src/**/*.html"
+                        ]
+                    }
                 }
             }
         }
     },
     "cli": {
-        "analytics": false
+        "analytics": false,
+        "schematicCollections": [
+            "angular-eslint"
+        ]
     }
 }

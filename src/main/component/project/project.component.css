@@ -1,11 +1,7 @@
 .project-component {
-    height: 100vh;
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.project-container {
-    width: 100%;
-    height: 100%;
+    padding-block-end: 3rem;
+    padding-inline: 3rem;
 }

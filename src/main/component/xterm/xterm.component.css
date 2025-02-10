@@ -1,43 +1,43 @@
-@import '@xterm/xterm/css/xterm.css';
+@import url('@xterm/xterm/css/xterm.css');
 
 .xterm-component {
-    width: 100%;
     height: 100%;
     overflow: hidden;
+    width: 100%;
 }
 
 .xterm {
-    height: calc(100% - 20px) !important;
-    width: calc(100% - 20px) !important;
+    height: 100% !important;
     padding: 10px !important;
+    width: 100% !important;
 }
 
 
 .xterm-viewport {
-    overflow-y: auto !important;
-    height: 100% !important;
-    width: 100% !important;
     background-color: #151417 !important;
+    height: 100% !important;
+    overflow-y: auto !important;
     transition: 0.3s ease;
+    width: 100% !important;
 }
 
 .xterm-screen {
     box-sizing: border-box !important;
-    overflow: visible !important;
     height: 100% !important;
+    overflow: visible !important;
     width: 100% !important;
 }
 
 .xterm-rows {
+    color: #FBFBFB !important;
     height: 100% !important;
     overflow: visible !important;
-    color: #FBFBFB !important;
     transition: 0.3s ease;
 }
 
 .xterm-selection {
-    top: 10px !important;
     left: 10px !important;
+    top: 10px !important;
 }
 
 .xterm-selection>div {

@@ -18,7 +18,7 @@ export class XtermComponent implements OnChanges, OnInit, OnDestroy {
     term: Terminal | null = null;
 
     resize = new Subject<void>();
-    $resize = new ResizeObserver(_ => {
+    $resize = new ResizeObserver(() => {
         this.resize.next();
     });
 

@@ -63,7 +63,7 @@ export class CodemirrorComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
-        if (this.view) {
+        if (this.view !== null) {
             this.view.destroy();
         }
     }

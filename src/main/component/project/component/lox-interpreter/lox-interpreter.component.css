@@ -1,105 +1,90 @@
 .project-lox-component {
     display: flex;
+    gap: 1rem;
     justify-content: stretch;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+    position: relative;
 }
 
 .lox-tutorial {
-    flex: 1;
+    border-inline-end: 1px solid #413E46;
     color: #FBFBFB;
     display: flex;
+    flex: 1 1 0%;
     flex-direction: column;
-    justify-content: center;
-    border-inline-end: 1px solid #413E46;
-    padding-inline: 4rem;
-    margin-inline-end: 1rem;
-    padding-block: 1rem 2rem;
+    align-items: center;
 }
 
 .lox-interactive {
-    flex: 2;
+    align-self: flex-start;
     display: flex;
+    flex: 1 1 0%;
     flex-direction: column;
-    margin-inline-end: 1rem;
-    top: 0;
+    height: calc(100vh - 3rem);
+    max-height: calc(100vh - 3rem);
     position: sticky;
+    top: 0;
+    justify-content: stretch;
 }
 
 .lox-interactive-header {
-    display: flex;
-    justify-content: center;
     align-items: center;
     border-inline: 1px solid #413E46;
+    display: flex;
+    justify-content: center;
     padding: 0.5rem;
+    max-height: 62px;
 }
 
 .lox-interactive-container {
-    flex: 1;
-    gap: 0.5rem;
     display: flex;
     flex-direction: column;
-}
-
-@media (min-width: 1800px) {
-    .lox-interactive-container {
-        flex-direction: row;
-    }
-}
-
-.lox-interactive-container>div {
-    width: 100%;
-    height: 50%;
-    border: 1px solid #413E46;
-}
-
-@media (min-width: 1800px) {
-    .lox-interactive-container>div {
-        width: 50%;
-        height: 100%;
-    }
+    flex: 1 1 0%;
+    gap: 0.5rem;
+    height: calc(100% - 62px);
 }
 
 .lox-editor {
+    height: 50%;
+    border: 1px solid #413E46;
     display: flex;
     flex-direction: column;
-    border: 3px solid #232125;
 }
 
 .lox-editor-header {
+    align-items: center;
+    background-color: #151417;
+    border-block-end: 1px solid #413E46;
+    color: #FBFBFB;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 0.5rem;
-    background-color: #151417;
-    color: #FBFBFB;
-    border-block-end: 1px solid #413E46;
+    max-height: 42px;
 }
 
 .lox-editor-container {
+    height: calc(100% - 42px);
     width: 100%;
-    height: 100%;
 }
 
 .lox-console {
-    width: 340px;
+    height: 50%;
+    border: 1px solid #413E46;
     display: flex;
     flex-direction: column;
-    border: 3px solid #232125;
 }
 
 .lox-console-header {
+    align-items: center;
+    background-color: #151417;
+    border-block-end: 1px solid #413E46;
+    color: #FBFBFB;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 0.5rem;
-    background-color: #151417;
-    color: #FBFBFB;
-    border-block-end: 1px solid #413E46;
+    max-height: 42px;
 }
 
 .lox-console-container {
+    height: calc(100% - 42px);
     width: 100%;
-    height: 100%;
 }

@@ -22,7 +22,7 @@ export class Lexer {
         Lexer.keywords.set("super", TokenType.SUPER);
     }
 
-    ch: string = '\0';
+    ch = '\0';
 
     start = 0;
     current = 0;

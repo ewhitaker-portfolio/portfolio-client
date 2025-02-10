@@ -1,138 +1,136 @@
 .main-component {
-    display: flex;
     background-color: #0F0F11;
+    display: flex;
+    justify-content: stretch;
+    position: relative;
 }
 
 .main-nav-container {
-    height: 100%;
+    align-self: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: stretch;
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
+    width: auto;
 }
 
 .nav-component {
-    display: flex;
     align-items: stretch;
-    height: calc(100vh - 3rem);
-    max-height: calc(100vh - 3rem);
-    padding-block: 1rem 2rem;
-    background-color: color-mix(in srgb, #0F0F11 70%, transparent);
     backdrop-filter: blur(16px);
+    background-color: color-mix(in srgb, #0F0F11 70%, transparent);
     border-inline-end: 1px solid #232125;
-    position: relative;
-    overflow: auto;
-}
-
-.nav-container {
     display: flex;
+    flex: 1 1 0%;
     flex-direction: column;
     justify-content: space-between;
+    padding-block: 1rem 2rem;
+    transition: .3s ease-out .1s;
+    width: 3.125rem;
+}
+
+.nav-component.open {
+    width: 6.875rem;
 }
 
 .nav-header {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
+    flex: none;
+    justify-content: center;
 }
 
 .nav-header-button {
-    width: 32px;
-    height: 24px;
-    position: relative;
-    margin: 0 auto;
     background: none;
     border: none;
-    transform: rotate(0deg);
-    transition: .5s ease-in-out;
     cursor: pointer;
+    height: 24px;
+    padding: 0;
+    position: relative;
+    transition: .5s ease-in-out;
+    width: 32px;
 }
 
-.nav-header-button span {
-    display: block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
+.nav-header-button>span {
     background: #A39FA9;
-    border-radius: 9px;
-    opacity: 1;
+    display: block;
+    height: 2px;
     left: 0;
-    transform: rotate(0deg);
+    position: absolute;
     transition: .25s ease-in-out;
+    width: 100%;
 }
 
-.nav-header-button:hover span {
+.nav-header-button:hover>span {
     background: #FBFBFB;
     height: 2.5px;
 }
 
-.nav-header-button span:nth-child(1) {
+.nav-header-button>span:nth-child(1) {
     top: 0;
 }
 
-.nav-header-button span:nth-child(2),
-.nav-header-button span:nth-child(3) {
-    top: 10px;
+.nav-header-button>span:nth-child(2),
+.nav-header-button>span:nth-child(3) {
+    top: 9px;
 }
 
-.nav-header-button span:nth-child(4) {
-    top: 20px;
+.nav-header-button>span:nth-child(4) {
+    top: 18px;
 }
 
-.nav-header-button.open span:nth-child(1) {
+.nav-header-button.open>span:nth-child(1) {
+    left: 50%;
     top: 18px;
     width: 0%;
-    left: 50%;
 }
 
-.nav-header-button.open span:nth-child(2) {
+.nav-header-button.open>span:nth-child(2) {
     transform: rotate(45deg);
 }
 
-.nav-header-button.open span:nth-child(3) {
+.nav-header-button.open>span:nth-child(3) {
     transform: rotate(-45deg);
 }
 
-.nav-header-button.open span:nth-child(4) {
+.nav-header-button.open>span:nth-child(4) {
+    left: 50%;
     top: 18px;
     width: 0%;
-    left: 50%;
 }
 
 
 .nav-list {
-    list-style: none;
     display: flex;
     flex-direction: column;
-    padding: 0;
-    text-decoration: none;
     font-size: .875rem;
     font-weight: 400;
     letter-spacing: -.02rem;
+    padding: 0;
 }
 
 .nav-list-item {
-    width: 3.125rem;
-    position: relative;
-    list-style: none;
-    fill: #A39FA9;
     color: #A39FA9;
-    transition: .3s ease-out .1s;
-}
-
-.nav-list-item.open {
-    width: 6.875rem;
+    fill: #A39FA9;
+    position: relative;
+    width: 100%;
 }
 
 .nav-list-item::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    bottom: 0;
-    width: 2px;
-    height: 60%;
-    transform-origin: center;
     background-color: #FBFBFB;
+    content: "";
+    height: 60%;
+    left: 0;
     opacity: 0;
+    position: absolute;
+    top: 50%;
     transform: translateY(-50%) scale(0.8);
+    transform-origin: center;
     transition: .3s ease;
+    width: 2px;
 }
 
 .nav-list-item:hover {
@@ -151,15 +149,15 @@
 }
 
 .nav-list-item-anchor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    color: inherit;
+    display: flex;
+    fill: inherit;
+    flex-direction: column;
     gap: 0.75rem;
+    justify-content: center;
     padding-block: 1.25rem;
     text-decoration: none;
-    color: inherit;
-    fill: inherit;
     transition: 0.3s ease;
 }
 
@@ -172,5 +170,8 @@
 }
 
 .main-content-container {
-    flex: 1;
+    align-items: center;
+    display: flex;
+    flex: 1 1 0%;
+    justify-content: center;
 }
